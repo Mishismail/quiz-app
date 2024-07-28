@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 import Settings from './components/Settings.js'
 import Question from './components/Question.js'
 import FinalScreen from './components/FinalScreen.js'
-
 import './App.css'
 
 function App() {
