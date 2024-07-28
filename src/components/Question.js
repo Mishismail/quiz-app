@@ -62,7 +62,7 @@ function Question() {
       })
     }
 
-    if (questionIndex + 1 <= questions.length) {
+    if (questionIndex + 1 < questions.length) {
       setTimeout(() => {
         setAnswerSelected(false)
         setSelectedAnswer(null)
@@ -75,18 +75,16 @@ function Question() {
     }
   }
 
-  /*
-    {
-      "category": "Entertainment: Video Games",
-      "type": "boolean",
-      "difficulty": "easy",
-      "question": "Peter Molyneux was the founder of Bullfrog Productions.",
-      "correct_answer": "True",
-      "incorrect_answers": [
-        "False"
-      ]
+  const handleNextClick = () => {
+    setAnswerSelected(false)
+    setSelectedAnswer(null)
+    if (questionIndex + 1 < questions.length) {
+      dispatch({
+        type: 'SET_INDEX',
+        index: questionIndex + 1,
+      })
     }
-  */
+  }
 
   const getClass = option => {
     if (!answerSelected) {
@@ -120,6 +118,7 @@ function Question() {
       <div>
         Score: {score} / {questions.length}
       </div>
+      <button onClick={handleNextClick}>Next</button>
     </div>
   )
 }
