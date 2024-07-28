@@ -77,16 +77,16 @@ Handles the API request to fetch quiz questions based on the selected settings.
 - **score**: Tracks the user's score.
 
 ### Actions
-**CHANGE_LOADING**
-**CHANGE_CATEGORY**
-**CHANGE_DIFFICULTY**
-**CHANGE_TYPE**
-**CHANGE_AMOUNT**
-**SET_QUESTIONS**
-**SET_INDEX**
-**SET_SCORE**
+1. **CHANGE_LOADING**
+2. **CHANGE_CATEGORY**
+3. **CHANGE_DIFFICULTY**
+4. **CHANGE_TYPE**
+5. **CHANGE_AMOUNT**
+6. **SET_QUESTIONS**
+7. **SET_INDEX**
+8. **SET_SCORE**
 
-### Reducers**
+### Reducers
 The Reducer function in src/Reducer.js handles the state changes based on the dispatched actions.
 
 ## Styling
@@ -95,5 +95,5 @@ Styles for the application are defined in src/App.css. You can customize the sty
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure your code follows the project's coding standards and includes appropriate tests.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Deployment
+
