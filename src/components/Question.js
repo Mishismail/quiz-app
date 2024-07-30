@@ -86,6 +86,13 @@ function Question() {
     }
   }
 
+  const handleExitClick = () => {
+    dispatch({
+      type: 'SET_QUESTIONS',
+      questions: [],
+    })
+  }
+
   const getClass = option => {
     if (!answerSelected) {
       return ``;
@@ -106,6 +113,7 @@ function Question() {
 
   return (
     <div>
+      <button className="exit-button" onClick={handleExitClick}>✖</button>
       <p><b>Question {questionIndex + 1}</b></p>
       <h3>{question.question}</h3>
       <ul>

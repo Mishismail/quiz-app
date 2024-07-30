@@ -207,6 +207,23 @@ li.selected:not(.correct) {
   max-width: 100px; /* Set the maximum width */
 }
 
+.exit-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+.exit-button:hover {
+  color: #ff0000; /* Change the color when hovered */
+}
+
 /* CSS for Desktops */
 @media (min-width: 1025px) {
   .quiz-container {
