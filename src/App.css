@@ -66,9 +66,6 @@ h1 {
 h2 {
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
   margin-bottom: 0.6em;
 }
 
@@ -77,20 +74,6 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 0 16px;
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #333;
-}
-
-.App-link {
-  color: #007aff;
 }
 
 ul {
@@ -195,16 +178,16 @@ li.selected:not(.correct) {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* This makes sure the container takes up the full height of the viewport */
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
 }
 
 .quiz-container {
   background-color: rgba(255, 255, 255, 0.1); /* Adjust the alpha value for transparency */
-  padding: 40px;
-  border-radius: 60px;
+  padding: 20px; /* Reduced padding for better mobile view */
+  border-radius: 20px; /* Reduced border radius for better mobile view */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-  width: 80%; /* Set the width to 80% of the parent container width */
-  max-width: 100px; /* Set the maximum width */
+  width: 100%; /* Ensure the width is 100% of the parent container */
+  max-width: 600px; /* Set the maximum width */
 }
 
 .exit-button {
@@ -227,23 +210,39 @@ li.selected:not(.correct) {
 /* CSS for Desktops */
 @media (min-width: 1025px) {
   .quiz-container {
-    max-width: 600px;
+    padding: 40px; /* Increase padding for larger screens */
+    border-radius: 60px; /* Increase border radius for larger screens */
+  }
+
+  h1 {
+    font-size: 5rem; /* Larger font size for h1 on desktops */
   }
 }
 
 /* CSS for Tablets and iPads */
 @media (min-width: 768px) and (max-width: 1024px) {
   .quiz-container {
-    max-width: 400px;
+    padding: 30px; /* Adjust padding for tablets */
+    border-radius: 40px; /* Adjust border radius for tablets */
+  }
+
+  h1 {
+    font-size: 4rem; /* Adjust font size for h1 on tablets */
   }
 }
 
 /* CSS for Mobile devices */
 @media (max-width: 767px) {
   .quiz-container {
-    max-width: 80%;
+    padding: 20px; /* Reduced padding for better mobile view */
+    border-radius: 20px; /* Reduced border radius for better mobile view */
+  }
+
+  h1 {
+    font-size: 3rem; /* Smaller font size for h1 on mobiles */
   }
 }
+
 
 
 
